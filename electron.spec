@@ -1,6 +1,3 @@
-# build Atom and Electron packages: https://github.com/tensor5/arch-atom
-# RPM spec: https://github.com/helber/fedora-specs
-%global arch %(test $(rpm -E%?_arch) = x86_64 && echo "x64" || echo "ia32")
 %global debug_package %{nil}
 %global _hardened_build 1
 %global __provides_exclude (libnode)
@@ -9,20 +6,25 @@
 %global repo %{project}
 %global electrondir %{_libdir}/%{name}/%{version}
 
-# commit
-%global _commit 93c4f90bee2dce330db596c145102d6f272f5f4f
-%global _shortcommit %(c=%{_commit}; echo ${c:0:7})
+#defining architectures
+%ifarch x86_64
+%global platform linux64
+%global archele linux-x64
+%else
+%global platform linux32
+%global archele linux-x86
+%endif
 
 Name:    electron
-Version: 1.3.13
-Release: 1.prebuilt%{?dist}
+Version: 1.3.15
+Release: 1%{?dist}
 Summary: Framework for build cross-platform desktop applications
 Group:   Applications/Editors
 License: MIT
 URL:     https://github.com/electron/electron
-#Source0: %%{url}/archive/%%{_commit}/%%{repo}-%%{_shortcommit}.tar.gz
+Source: https://github.com/electron/electron/releases/download/v%{version}/electron-v%{version}-%{archele}.zip
+Source1: https://atom.io/download/atom-shell/v%{version}/node-v%{version}.tar.gz
 
-BuildRequires: wget
 Requires(post): chkconfig
 Requires(postun): chkconfig
 Obsoletes: %{name} < %{version}-%{release}
@@ -34,19 +36,11 @@ using JavaScript, HTML and CSS. It is based on Node.js and Chromium.
 Visit http://electron.atom.io/ to learn more.
 
 %prep
-mkdir %{name}_build
-pushd %{name}_build
-
-wget %{url}/releases/download/v%{version}/%{name}-v%{version}-linux-%{arch}.zip
-unzip %{name}-v%{version}-linux-%{arch}.zip
-
-wget https://atom.io/download/atom-shell/v%{version}/node-v%{version}.tar.gz
-tar xf node-v%{version}.tar.gz
+%setup -c -a 1
 
 %build
 
 %install
-pushd %{name}_build
 
 # Install electron
 Files="content_shell.pak electron icudtl.dat libffmpeg.so libnode.so locales \
@@ -78,6 +72,9 @@ fi
 %{_libdir}/%{name}/%{version}/
 
 %changelog
+
+* Sun Aug 13 2017 David Vásquez <davidva AT tutanota DOT com> 1.3.15-1
+- Updated, added sources and new changes in the structure
 * Tue Jan  3 2017 mosquito <sensor.wen@gmail.com> - 1.3.13-1.git93c4f90
 - Release 1.3.13
 * Thu Dec  1 2016 mosquito <sensor.wen@gmail.com> - 1.3.9-1.gitcb9fdc4
