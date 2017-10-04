@@ -16,7 +16,7 @@
 %endif
 
 Name:    electron
-Version: 1.3.15
+Version: 1.6.14
 Release: 1%{?dist}
 Summary: Framework for build cross-platform desktop applications
 Group:   Applications/Editors
@@ -73,8 +73,12 @@ fi
 
 %changelog
 
+* Mon Oct 02 2017 David Vásquez <davidva AT tutanota DOT com> 1.6.14-1
+- Updated to 1.6.14
+
 * Sun Aug 13 2017 David Vásquez <davidva AT tutanota DOT com> 1.3.15-1
 - Updated, added sources and new changes in the structure
+
 * Tue Jan  3 2017 mosquito <sensor.wen@gmail.com> - 1.3.13-1.git93c4f90
 - Release 1.3.13
 * Thu Dec  1 2016 mosquito <sensor.wen@gmail.com> - 1.3.9-1.gitcb9fdc4
