@@ -16,13 +16,13 @@
 %endif
 
 Name:    electron
-Version: 1.8.4
+Version: 2.0.2
 Release: 1%{?dist}
 Summary: Framework for build cross-platform desktop applications
 Group:   Applications/Editors
 License: MIT
 URL:     https://github.com/electron/electron
-Source: https://github.com/electron/electron/releases/download/v%{version}/electron-v%{version}-%{archele}.zip
+Source:  https://github.com/electron/electron/releases/download/v%{version}/electron-v%{version}-%{archele}.zip
 Source1: https://atom.io/download/atom-shell/v%{version}/node-v%{version}.tar.gz
 
 Requires(post): chkconfig
@@ -72,6 +72,9 @@ fi
 %{_libdir}/%{name}/%{version}/
 
 %changelog
+
+* Tue May 22 2018 David Vásquez <davidva AT tutanota DOT com> 2.0.2-1
+- Updated to 2.0.2
 
 * Sun Mar 18 2018 David Vásquez <davidva AT tutanota DOT com> 1.8.4-1
 - Updated to 1.8.4
