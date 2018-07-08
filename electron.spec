@@ -16,7 +16,7 @@
 %endif
 
 Name:    electron
-Version: 2.0.3
+Version: 2.0.4
 Release: 1%{?dist}
 Summary: Framework for build cross-platform desktop applications
 Group:   Applications/Editors
@@ -27,7 +27,6 @@ Source1: https://atom.io/download/atom-shell/v%{version}/node-v%{version}.tar.gz
 
 Requires(post): chkconfig
 Requires(postun): chkconfig
-Obsoletes: %{name} < %{version}-%{release}
 
 %description
 The Electron framework lets you write cross-platform desktop applications
@@ -72,6 +71,9 @@ fi
 %{_libdir}/%{name}/%{version}/
 
 %changelog
+
+* Sun Jul 08 2018 David Vásquez <davidva AT tutanota DOT com> 2.0.4-1
+- Updated to 2.0.4
 
 * Tue Jun 26 2018 David Vásquez <davidva AT tutanota DOT com> 2.0.3-1
 - Updated to 2.0.3
