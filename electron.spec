@@ -43,7 +43,7 @@ Visit http://electron.atom.io/ to learn more.
 
 # Install electron
 Files="content_shell.pak electron icudtl.dat libffmpeg.so libnode.so locales \
-       natives_blob.bin resources snapshot_blob.bin version"
+       natives_blob.bin resources version"
 install -d %{buildroot}%{electrondir}
 cp -a $Files %{buildroot}%{electrondir}
 
@@ -84,7 +84,7 @@ fi
 * Thu Aug 09 2018 - David Va <davidva AT tuta DOT io> 2.0.7-1
 - Updated to 2.0.7
 
-* Wed Aug 02 2018 - David Va <davidva AT tuta DOT io> 2.0.6-1
+* Thu Aug 02 2018 - David Va <davidva AT tuta DOT io> 2.0.6-1
 - Updated to 2.0.6
 
 * Wed Jul 25 2018 David Vásquez <davidva AT tutanota DOT com> 2.0.5-1
