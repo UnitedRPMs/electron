@@ -16,7 +16,7 @@
 %endif
 
 Name:    electron
-Version: 3.0.0
+Version: 3.0.2
 Release: 1%{?dist}
 Summary: Framework for build cross-platform desktop applications
 Group:   Applications/Editors
@@ -71,6 +71,9 @@ fi
 %{_libdir}/%{name}/%{version}/
 
 %changelog
+
+* Mon Oct 01 2018 - David Va <davidva AT tuta DOT io> 3.0.2-1
+- Updated to 3.0.2
 
 * Thu Sep 20 2018 - David Va <davidva AT tuta DOT io> 3.0.0-1
 - Updated to 3.0.0
