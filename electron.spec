@@ -72,6 +72,9 @@ fi
 
 %changelog
 
+* Mon Nov 19 2018 - David Va <davidva AT tuta DOT io> 3.0.10-1
+- Updated to 3.0.10
+
 * Wed Nov 14 2018 - David Va <davidva AT tuta DOT io> 3.0.9-1
 - Updated to 3.0.9
 
