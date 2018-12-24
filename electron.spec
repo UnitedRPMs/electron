@@ -42,8 +42,8 @@ Visit http://electron.atom.io/ to learn more.
 %install
 
 # Install electron
-Files="content_shell.pak electron icudtl.dat libffmpeg.so libnode.so locales \
-       natives_blob.bin resources version"
+Files="electron icudtl.dat libffmpeg.so libVkICD_mock_icd.so libEGL.so libGLESv2.so locales \
+       natives_blob.bin resources version swiftshader resources.pak chrome_100_percent.pak chrome_200_percent.pak snapshot_blob.bin v8_context_snapshot.bin"
 install -d %{buildroot}%{electrondir}
 cp -a $Files %{buildroot}%{electrondir}
 
@@ -52,7 +52,7 @@ ln -sfv %{electrondir}/%{name} %{buildroot}%{_bindir}/%{name}-%{version}
 
 # Install node headers
 install -d %{buildroot}%{electrondir}/node
-cp -r node-v%{version}/* %{buildroot}%{electrondir}/node
+cp -r node_headers/include/node/* %{buildroot}%{electrondir}/node
 
 %post
 if [ $1 -ge 1 ]; then
