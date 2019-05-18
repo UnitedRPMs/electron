@@ -16,7 +16,7 @@
 %endif
 
 Name:    electron
-Version: 5.0.0
+Version: 5.0.1
 Release: 1%{?dist}
 Summary: Framework for build cross-platform desktop applications
 Group:   Applications/Editors
@@ -71,6 +71,9 @@ fi
 %{_libdir}/%{name}/%{version}/
 
 %changelog
+
+* Fri May 17 2019 - David Va <davidva AT tuta DOT io> 5.0.1-1
+- Updated to 5.0.1
 
 * Thu Apr 25 2019 - David Va <davidva AT tuta DOT io> 5.0.0-1
 - Updated to 5.0.0
