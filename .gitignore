@@ -6,3 +6,4 @@ SRPMS/*
 node*.tar.gz
 electron*.zip
 .directory
+*.rpm
