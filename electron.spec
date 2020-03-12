@@ -33,7 +33,7 @@
 %endif
 
 Name:    electron
-Version: 8.0.0
+Version: 8.1.1
 Release: 1%{?dist}
 Summary: Framework for build cross-platform desktop applications
 Group:   Applications/Editors
@@ -85,6 +85,9 @@ fi
 %{_libdir}/%{name}/%{version}/
 
 %changelog
+
+* Wed Mar 11 2020 - David Va <davidva AT tuta DOT io> 8.1.1-1
+- Updated to 8.1.1
 
 * Mon Feb 03 2020 - David Va <davidva AT tuta DOT io> 8.0.0-1
 - Updated to 8.0.0
