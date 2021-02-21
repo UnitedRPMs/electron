@@ -1,7 +1,7 @@
 #
 # spec file for package electron
 #
-# Copyright (c) 2020 UnitedRPMs.
+# Copyright (c) 2021 UnitedRPMs.
 #
 # All modifications and additions to the file contributed by third parties
 # remain the property of their copyright owners, unless otherwise agreed
@@ -33,7 +33,7 @@
 %endif
 
 Name:    electron
-Version: 10.1.5
+Version: 11.2.3
 Release: 1%{?dist}
 Summary: Framework for build cross-platform desktop applications
 Group:   Applications/Editors
@@ -85,6 +85,9 @@ fi
 %{_libdir}/%{name}/%{version}/
 
 %changelog
+
+* Mon Feb 15 2021 - David Va <davidva AT tuta DOT io> 11.2.3-1
+- Updated to 11.2.3
 
 * Sat Oct 24 2020 - David Va <davidva AT tuta DOT io> 10.1.5-1
 - Updated to 10.1.5
