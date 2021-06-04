@@ -33,7 +33,7 @@
 %endif
 
 Name:    electron
-Version: 12.0.2
+Version: 13.1.0
 Release: 1%{?dist}
 Summary: Framework for build cross-platform desktop applications
 Group:   Applications/Editors
@@ -85,6 +85,9 @@ fi
 %{_libdir}/%{name}/%{version}/
 
 %changelog
+
+* Thu Jun 03 2021 - David Va <davidva AT tuta DOT io> 13.1.0-1
+- Updated to 13.1.0
 
 * Sat Apr 17 2021 - David Va <davidva AT tuta DOT io> 12.0.2-1
 - Updated to 12.0.2
