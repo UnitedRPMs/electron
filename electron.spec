@@ -1,7 +1,7 @@
 #
 # spec file for package electron
 #
-# Copyright (c) 2021 UnitedRPMs.
+# Copyright (c) 2022 UnitedRPMs.
 #
 # All modifications and additions to the file contributed by third parties
 # remain the property of their copyright owners, unless otherwise agreed
@@ -33,7 +33,7 @@
 %endif
 
 Name:    electron
-Version: 15.2.0
+Version: 17.1.0
 Release: 1%{?dist}
 Summary: Framework for build cross-platform desktop applications
 Group:   Applications/Editors
@@ -85,6 +85,9 @@ fi
 %{_libdir}/%{name}/%{version}/
 
 %changelog
+
+* Thu Mar 03 2022 - David Va <davidva AT tuta DOT io> 17.1.0-1
+- Updated to 17.1.0
 
 * Sun Oct 24 2021 - David Va <davidva AT tuta DOT io> 15.2.0-1
 - Updated to 15.2.0
